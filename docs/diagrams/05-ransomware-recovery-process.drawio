@@ -1,0 +1,361 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
+  <diagram id="Ransomware-Recovery-Process" name="Ransomware Recovery Process">
+    <mxGraphModel dx="1807" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SIRE Ransomware Recovery Process - Emergency Response Playbook" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2F5496;" parent="1" vertex="1">
+          <mxGeometry x="327" y="20" width="1000" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phase-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#666666;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="80" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="Recovery Process Phases" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="90" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="detection-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="30" y="125" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="detection-text" value="Phase 1: Detection &amp; Isolation (0-15 min)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="123" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="assessment-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="30" y="155" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="assessment-text" value="Phase 2: Assessment &amp; Planning (15-30 min)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="153" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="recovery-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="30" y="185" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="recovery-text" value="Phase 3: SIRE Recovery (30 min - 2 hr)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="183" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="validation-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="30" y="215" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="validation-text" value="Phase 4: Validation &amp; Testing (2-4 hr)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="213" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="production-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="30" y="245" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="production-text" value="Phase 5: Production Rebuild (4-8 hr)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="65" y="243" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase1-container" value="Phase 1: Threat Detection &amp; Immediate Isolation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="340" y="80" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="security-alert" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Azure_Sentinel.svg;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="alert-label" value="Security Alert&#xa;Microsoft Sentinel" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="defender-alert" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Security_Center.svg;" parent="1" vertex="1">
+          <mxGeometry x="450" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="defender-label" value="Threat Detection&#xa;Defender for Cloud" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="network-isolation" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Azure_Firewall.svg;" parent="1" vertex="1">
+          <mxGeometry x="540" y="120" width="50" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="isolation-label" value="Network Isolation&#xa;Emergency Firewall" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="crisis-team" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Users.svg;" parent="1" vertex="1">
+          <mxGeometry x="590" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="crisis-label" value="Crisis Team&#xa;Activation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="575" y="175" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase1-actions" value="⚡ Immediate Actions (0-15 minutes):&#xa;• Automated threat isolation&#xa;• Network segmentation activation&#xa;• Incident commander notification&#xa;• Forensic evidence preservation" style="text;html=1;strokeColor=#D32F2F;fillColor=#FFEBEE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="355" y="215" width="290" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2-container" value="Phase 2: Impact Assessment &amp; Recovery Planning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="700" y="80" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="forensic-analysis" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Log_Analytics_Workspaces.svg;" parent="1" vertex="1">
+          <mxGeometry x="720" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="forensic-label" value="Forensic Analysis&#xa;Log Analytics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="impact-assessment" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/management_governance/Resource_Health.svg;" parent="1" vertex="1">
+          <mxGeometry x="810" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="impact-label" value="Impact Assessment&#xa;Resource Health" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="recovery-planning" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/management_governance/Blueprints.svg;" parent="1" vertex="1">
+          <mxGeometry x="900" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="planning-label" value="Recovery Planning&#xa;Blueprints" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="stakeholder-notify" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Information.svg;" parent="1" vertex="1">
+          <mxGeometry x="950" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="notify-label" value="Stakeholder&#xa;Notification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="935" y="175" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2-actions" value="🔍 Assessment Actions (15-30 minutes):&#xa;• Damage scope identification&#xa;• Clean backup verification&#xa;• Recovery time estimation&#xa;• Business continuity activation" style="text;html=1;strokeColor=#F57C00;fillColor=#FFF8E1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="715" y="210" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3-container" value="Phase 3: SIRE Environment Activation &amp; Recovery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="80" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="sire-activation" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/migrate/Azure_Site_Recovery.svg;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sire-label" value="SIRE Activation&#xa;Site Recovery" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="data-restoration" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Recovery_Services_Vaults.svg;" parent="1" vertex="1">
+          <mxGeometry x="1170" y="120" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="restoration-label" value="Data Restoration&#xa;Recovery Vault" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="service-restart" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="restart-label" value="Service Restart&#xa;Applications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1240" y="175" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dns-switchover" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DNS_Zones.svg;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="120" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dns-label" value="DNS Switchover&#xa;Traffic Routing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1295" y="175" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3-actions" value="🔄 Recovery Actions (30 min - 2 hours):&#xa;• SIRE environment activation&#xa;• Clean data restoration from immutable storage&#xa;• Application services startup&#xa;• Network traffic redirection" style="text;html=1;strokeColor=#388E3C;fillColor=#F1F8E9;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1075" y="210" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4-container" value="Phase 4: Service Validation &amp; Security Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="functional-testing" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/devops/Test_Plans.svg;" parent="1" vertex="1">
+          <mxGeometry x="360" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="functional-label" value="Functional Testing&#xa;Test Plans" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="security-scan" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Azure_Defender.svg;" parent="1" vertex="1">
+          <mxGeometry x="450" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="scan-label" value="Security Scan&#xa;Vulnerability Check" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-testing" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/monitor/Application_Insights.svg;" parent="1" vertex="1">
+          <mxGeometry x="540" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-label" value="Performance Test&#xa;App Insights" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="user-acceptance" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Users.svg;" parent="1" vertex="1">
+          <mxGeometry x="590" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="acceptance-label" value="User Acceptance&#xa;Business Validation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4-actions" value="✅ Validation Actions (2-4 hours):&#xa;• End-to-end functionality testing&#xa;• Security posture verification&#xa;• Performance baseline confirmation&#xa;• Business process validation" style="text;html=1;strokeColor=#0277BD;fillColor=#E3F2FD;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="355" y="430" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phase5-container" value="Phase 5: Clean Production Environment Rebuild" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="700" y="300" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="infra-rebuild" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Resource_Groups.svg;" parent="1" vertex="1">
+          <mxGeometry x="720" y="340" width="50" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="infra-label" value="Infrastructure&#xa;Rebuild" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="390" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="secure-deployment" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/devops/Azure_DevOps.svg;" parent="1" vertex="1">
+          <mxGeometry x="810" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="deploy-label" value="Secure Deployment&#xa;DevOps Pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="data-migration" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/migrate/Azure_Migrate.svg;" parent="1" vertex="1">
+          <mxGeometry x="890" y="337.5" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="migration-label" value="Data Migration&#xa;Clean Transfer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="production-cutover" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Traffic_Manager_Profiles.svg;" parent="1" vertex="1">
+          <mxGeometry x="955" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cutover-label" value="Production&#xa;Cutover" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="935" y="395" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="phase5-actions" value="🏗️ Rebuild Actions (4-8 hours):&#xa;• New production environment creation&#xa;• Hardened security configuration&#xa;• Validated data migration from SIRE&#xa;• Gradual traffic transition" style="text;html=1;strokeColor=#7B1FA2;fillColor=#F3E5F5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="715" y="430" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="post-recovery-container" value="SIRE Post-Recovery Strategy &amp; Future Readiness" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFECB3;strokeColor=#F57F17;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="300" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="keep-active" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Process.svg;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="active-label" value="Keep Active&#xa;Hot Standby" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="scale-down" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/VM_Scale_Sets.svg;" parent="1" vertex="1">
+          <mxGeometry x="1170" y="340" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="scale-label" value="Scale Down&#xa;Cost Optimization" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="rapid-reactivation" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/management_governance/Automation_Accounts.svg;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="reactivation-label" value="Rapid Reactivation&#xa;15-min Deployment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1240" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="lessons-learned" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Learn.svg;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lessons-label" value="Lessons Learned&#xa;Process Improvement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1290" y="395" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="strategy-actions" value="🎯 Recommended Strategy:&#xa;• Keep SIRE active for immediate readiness&#xa;• Implement continuous threat monitoring&#xa;• Regular recovery testing (monthly)&#xa;• Enhanced security posture" style="text;html=1;strokeColor=#F57F17;fillColor=#FFF8E1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1075" y="430" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1to2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="phase1-container" target="phase2-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="170" as="sourcePoint" />
+            <mxPoint x="700" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow1to2-label" value="15 min" style="text;html=1;strokeColor=none;fillColor=#FFCDD2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="150" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2to3" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="phase2-container" target="phase3-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="170" as="sourcePoint" />
+            <mxPoint x="1060" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow2to3-label" value="30 min" style="text;html=1;strokeColor=none;fillColor=#FFE0B2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="150" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3to4" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="phase3-container" target="phase4-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1060" y="270" as="sourcePoint" />
+            <mxPoint x="660" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow3to4-label" value="2 hr" style="text;html=1;strokeColor=none;fillColor=#C8E6C9;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="750" y="270" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4to5" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="phase4-container" target="phase5-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="390" as="sourcePoint" />
+            <mxPoint x="700" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow4to5-label" value="4 hr" style="text;html=1;strokeColor=none;fillColor=#E1F5FE;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="370" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5topost" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="phase5-container" target="post-recovery-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="390" as="sourcePoint" />
+            <mxPoint x="1060" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow5topost-label" value="8 hr" style="text;html=1;strokeColor=none;fillColor=#F3E5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="370" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="emergency-contacts" value="🚨 Emergency Contacts &amp; Escalation" style="text;html=1;strokeColor=#D32F2F;fillColor=#FFEBEE;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="320" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="contacts-details" value="• Incident Commander: 24/7 hotline&#xa;• CISO/Security Team: Immediate escalation&#xa;• Business Continuity Manager: Stakeholder comm&#xa;• Azure Support: Premier support channel&#xa;• Legal/Compliance: Regulatory notification&#xa;• Executive Leadership: Major incident escalation&#xa;• Customer Support: Customer communication&#xa;• Media Relations: External communication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="355" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="success-factors" value="✅ Critical Success Factors" style="text;html=1;strokeColor=#2E7D32;fillColor=#E8F5E8;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="490" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="factors-details" value="• Immutable backup integrity verified&#xa;• SIRE environment regularly tested&#xa;• Automated recovery scripts validated&#xa;• Team training completed quarterly&#xa;• Communication plans well-rehearsed&#xa;• Security scanning tools operational&#xa;• Business process documentation current&#xa;• Customer communication templates ready" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="525" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rto-objectives" value="⏱️ Recovery Time Objectives" style="text;html=1;strokeColor=#1976D2;fillColor=#E3F2FD;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="660" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="rto-details" value="• Phase 1 (Detection): 0-15 minutes&#xa;• Phase 2 (Assessment): 15-30 minutes&#xa;• Phase 3 (SIRE Recovery): 30 min - 2 hours&#xa;• Phase 4 (Validation): 2-4 hours&#xa;• Phase 5 (Production): 4-8 hours&#xa;• Total RTO: &lt; 8 hours (Tier 1 applications)&#xa;• Business operations: Continuous via SIRE&#xa;• Full production: &lt; 8 hours with clean rebuild" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="695" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="automation-title" value="🤖 Automation Tools &amp; Scripts" style="text;html=1;strokeColor=#FF5722;fillColor=#FFF3E0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="520" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="powershell-automation" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="570" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ps-title" value="PowerShell Automation Scripts" style="text;html=1;strokeColor=#3F51B5;fillColor=#E8EAF6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="580" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ps-scripts" value="• Invoke-EmergencyIsolation.ps1&#xa;• Start-SIRERecovery.ps1&#xa;• Test-RecoveryEnvironment.ps1&#xa;• Deploy-CleanProduction.ps1&#xa;• Validate-SecurityPosture.ps1&#xa;• Send-IncidentNotifications.ps1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="380" y="610" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cli-automation" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00695C;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="700" y="570" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cli-title" value="Azure CLI Automation Scripts" style="text;html=1;strokeColor=#00695C;fillColor=#E0F2F1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="710" y="580" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cli-scripts" value="• emergency-network-isolation.sh&#xa;• sire-failover-activation.sh&#xa;• backup-integrity-verification.sh&#xa;• production-environment-rebuild.sh&#xa;• security-compliance-check.sh&#xa;• cost-optimization-post-recovery.sh" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="720" y="610" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iac-templates" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="570" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iac-title" value="Infrastructure as Code Templates" style="text;html=1;strokeColor=#E65100;fillColor=#FFF3E0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="580" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iac-list" value="• sire-environment.bicep&#xa;• security-baseline.json&#xa;• monitoring-stack.yaml&#xa;• backup-policies.template&#xa;• network-isolation.bicep&#xa;• compliance-controls.json" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="610" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-points" value="🎯 Key Decision Points During Recovery" style="text;html=1;strokeColor=#7B1FA2;fillColor=#F3E5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="720" width="1040" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-matrix" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#666666;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="340" y="770" width="1040" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="decision1" value="Decision 1: Isolation Scope" style="text;html=1;strokeColor=#D32F2F;fillColor=#FFCDD2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="785" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="decision1-details" value="• Single application vs entire environment&#xa;• Network segmentation level&#xa;• User access restrictions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+          <mxGeometry x="370" y="810" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="decision2" value="Decision 2: Recovery Strategy" style="text;html=1;strokeColor=#F57C00;fillColor=#FFE0B2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="785" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="decision2-details" value="• SIRE activation vs backup restore&#xa;• Data freshness requirements&#xa;• Service priority ranking" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+          <mxGeometry x="590" y="810" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="decision3" value="Decision 3: Communication Level" style="text;html=1;strokeColor=#388E3C;fillColor=#C8E6C9;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="785" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="decision3-details" value="• Internal vs external notification&#xa;• Customer communication timing&#xa;• Regulatory reporting requirements" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+          <mxGeometry x="810" y="810" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="decision4" value="Decision 4: Post-Recovery Actions" style="text;html=1;strokeColor=#0277BD;fillColor=#E1F5FE;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="785" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="decision4-details" value="• SIRE environment disposition&#xa;• Security posture enhancement&#xa;• Process improvement priorities" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="810" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="best-practices" value="💡 Azure Best Practices Implementation" style="text;html=1;strokeColor=#1976D2;fillColor=#E3F2FD;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="525" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="practices-list" value="✓ Zero Trust Architecture Enforcement&#xa;✓ Immutable Backup Verification&#xa;✓ Automated Threat Response&#xa;✓ Business Continuity Plan Alignment&#xa;✓ Azure Well-Architected Framework&#xa;✓ Microsoft Security Benchmarks&#xa;✓ Continuous Monitoring Integration&#xa;✓ Cost-Effective Resource Allocation&#xa;✓ Compliance Framework Adherence&#xa;✓ Stakeholder Communication Plans" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="565" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="success-metrics" value="📈 Success Metrics&#xa;• Detection Time: &lt; 15 minutes&#xa;• SIRE Activation: &lt; 2 hours&#xa;• Business Continuity: 99.9% uptime&#xa;• Data Integrity: 100% recovery&#xa;• Security Posture: Enhanced post-recovery" style="text;html=1;strokeColor=#2E7D32;fillColor=#E8F5E8;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="730" width="240" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

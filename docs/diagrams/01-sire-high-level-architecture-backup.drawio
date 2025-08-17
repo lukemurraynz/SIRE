@@ -1,0 +1,339 @@
+<mxfile host="app.diagrams.net" modified="2024-01-10T00:00:00.000Z" agent="5.0" etag="" version="22.1.16" type="device">
+  <diagram id="SIRE-High-Level-Architecture" name="SIRE High-Level Architecture">
+    <mxGraphModel dx="2074" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Secure Isolated Recovery Environment (SIRE) - High-Level Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2F5496;" vertex="1" parent="1">
+          <mxGeometry x="527" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#666666;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-production" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-production-text" value="Production Environment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="118" width="120" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-sire" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="145" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-sire-text" value="SIRE Environment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="143" width="120" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-backup" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-backup-text" value="Backup &amp; Recovery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="168" width="120" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-security" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="30" y="195" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-security-text" value="Security &amp; Identity" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="193" width="120" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- Primary Region Container -->
+        <mxCell id="primary-region-container" value="Primary Region (East US 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=3;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="640" height="520" as="geometry" />
+        </mxCell>
+        
+        <!-- Production Environment -->
+        <mxCell id="production-env" value="Production Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="280" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- Production VNet -->
+        <mxCell id="prod-vnet" value="Production VNet&#xa;10.1.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=1;fontSize=12;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="150" width="240" height="170" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Firewall -->
+        <mxCell id="azure-firewall" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=image;image=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwNzhENCIgaGVpZ2h0PSI0OCIgd2lkdGg9IjQ4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmlyZXdhbGxHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwNzhENDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDA1QTlFO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTI0IDRMOCAxMlYzMkM4IDM4LjYyNyAxNi4zNzMgNDQgMjQgNDRDMzEuNjI3IDQ0IDQwIDM4LjYyNyA0MCAzMlYxMkwyNCA0WiIgZmlsbD0idXJsKCNmaXJld2FsbEdyYWQpIi8+CiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI0IDhMMTQgMTRWMzBDMTQgMzQuNDE4IDE4LjU4MiAzOCAyNCAzOEMyOS40MTggMzggMzQgMzQuNDE4IDM0IDMwVjE0TDI0IDhaIi8+CiAgPHBhdGggZmlsbD0iIzAwNzhENCIgZD0iTTI0IDEyTDE4IDE2VjI2QzE4IDI4LjIwOSAyMC43OTEgMzAgMjQgMzBDMjcuMjA5IDMwIDMwIDI4LjIwOSAzMCAyNlYxNkwyNCAxMloiLz4KICA8cmVjdCB4PSIyMSIgeT0iMTkiIHdpZHRoPSI2IiBoZWlnaHQ9IjIiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIyMSIgeT0iMjIiIHdpZHRoPSI2IiBoZWlnaHQ9IjIiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIyMSIgeT0iMjUiIHdpZHRoPSI2IiBoZWlnaHQ9IjIiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+;fillColor=#0078D4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="170" width="40" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-firewall-label" value="Azure Firewall" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="207" width="100" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- App Service -->
+        <mxCell id="app-service" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="340" y="240" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-service-label" value="App Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="325" y="295" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- SQL Database -->
+        <mxCell id="sql-database" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Database.svg;" vertex="1" parent="1">
+          <mxGeometry x="470" y="240" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sql-database-label" value="SQL Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="455" y="295" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- SIRE Environment -->
+        <mxCell id="sire-env" value="SIRE Environment (Air-Gapped)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="120" width="280" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- SIRE VNet -->
+        <mxCell id="sire-vnet" value="SIRE VNet&#xa;10.2.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2E6;strokeColor=#FF8000;strokeWidth=1;fontSize=12;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="150" width="240" height="170" as="geometry" />
+        </mxCell>
+        
+        <!-- Recovery Services -->
+        <mxCell id="recovery-services" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/migrate/Azure_Site_Recovery.svg;" vertex="1" parent="1">
+          <mxGeometry x="660" y="180" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="recovery-services-label" value="Site Recovery" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="645" y="235" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Restored App Service -->
+        <mxCell id="restored-app-service" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;fillColor=#FFE6CC;" vertex="1" parent="1">
+          <mxGeometry x="790" y="180" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="restored-app-service-label" value="Restored Services" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="775" y="235" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Recovery Vault -->
+        <mxCell id="recovery-vault" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Recovery_Services_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="720" y="260" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="recovery-vault-label" value="Recovery Vault" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="305" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Backup and Compliance Layer -->
+        <mxCell id="backup-layer" value="Backup &amp; Compliance Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="370" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Backup -->
+        <mxCell id="azure-backup" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=image;image=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwNzhENCIgaGVpZ2h0PSI0OCIgd2lkdGg9IjQ4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmFja3VwR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDc4RDQ7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwNUE5RTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik04IDEwSDE2TDI0IDZMMzIgMTBINDBWMzhIOFYxMFoiIGZpbGw9InVybCgjYmFja3VwR3JhZCkiLz4KICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTIgMTZIMzZWMzRIMTJWMTZaIi8+CiAgPHBhdGggZmlsbD0iIzAwNzhENCIgZD0iTTE2IDIwSDMyVjMwSDE2VjIwWiIvPgogIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMCAyM0gyOFYyN0gyMFYyM1oiLz4KICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI1IiByPSIxIiBmaWxsPSIjMDA3OEQ0Ii8+CiAgPHBhdGggZD0iTTI0IDEyTDIwIDE0VjE4TDI0IDE2TDI4IDE4VjE0TDI0IDEyWiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4=;fillColor=#0078D4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-backup-label" value="Azure Backup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="325" y="455" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Immutable Storage -->
+        <mxCell id="immutable-storage" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="470" y="400" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="immutable-storage-label" value="Immutable Storage&#xa;(WORM)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="445" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Monitor -->
+        <mxCell id="azure-monitor" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=image;image=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwNzhENCIgaGVpZ2h0PSI0OCIgd2lkdGg9IjQ4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibW9uaXRvckdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDA3OEQ0O3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDVBOUU7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI2IiB3aWR0aD0iNDAiIGhlaWdodD0iMzYiIHJ4PSIyIiBmaWxsPSJ1cmwoI21vbml0b3JHcmFkKSIvPgogIDxyZWN0IHg9IjgiIHk9IjEwIiB3aWR0aD0iMzIiIGhlaWdodD0iMjgiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0Y4RjlGQSIvPgogIDxwYXRoIGQ9Ik0xNCAzMEwxOCAyNkwyMiAyOEwyNiAyMkwzMCAyNEwzNCAyMCIgc3Ryb2tlPSIjMDA3OEQ0IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjI2IiByPSIxLjUiIGZpbGw9IiMwMDc4RDQiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjI4IiByPSIxLjUiIGZpbGw9IiMwMDc4RDQiLz4KICA8Y2lyY2xlIGN4PSIyNiIgY3k9IjIyIiByPSIxLjUiIGZpbGw9IiMwMDc4RDQiLz4KICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjI0IiByPSIxLjUiIGZpbGw9IiMwMDc4RDQiLz4KICA8cmVjdCB4PSIxNCIgeT0iMzIiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMDc4RDQiLz4KICA8cmVjdCB4PSIxOCIgeT0iMzIiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMDc4RDQiLz4KICA8cmVjdCB4PSIyMiIgeT0iMzIiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMDc4RDQiLz4KICA8cmVjdCB4PSIyNiIgeT0iMzIiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMDc4RDQiLz4KPC9zdmc+;fillColor=#0078D4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-monitor-label" value="Azure Monitor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="455" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Log Analytics -->
+        <mxCell id="log-analytics" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Log_Analytics_Workspaces.svg;" vertex="1" parent="1">
+          <mxGeometry x="730" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="log-analytics-label" value="Log Analytics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="715" y="455" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Business Continuity Center -->
+        <mxCell id="bc-center" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Resource_Groups.svg;" vertex="1" parent="1">
+          <mxGeometry x="820" y="400" width="50" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bc-center-label" value="Business Continuity&#xa;Center" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="445" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Secondary Region -->
+        <mxCell id="secondary-region" value="Secondary Region (West US 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=3;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="640" height="520" as="geometry" />
+        </mxCell>
+        
+        <!-- DR Environment -->
+        <mxCell id="dr-env" value="Disaster Recovery Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="120" width="280" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- DR VNet -->
+        <mxCell id="dr-vnet" value="DR VNet&#xa;10.3.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;strokeWidth=1;fontSize=12;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="150" width="240" height="170" as="geometry" />
+        </mxCell>
+        
+        <!-- Standby Resources -->
+        <mxCell id="standby-app" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;fillColor=#E8EAF6;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="standby-app-label" value="Standby Services" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="235" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Cross-Region Backup -->
+        <mxCell id="cross-region-backup" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="180" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-region-backup-label" value="Cross-Region&#xa;Backup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="225" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Monitoring and Security -->
+        <mxCell id="monitoring-security" value="Monitoring &amp; Security Services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFECB3;strokeColor=#F57F17;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="120" width="280" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- Microsoft Sentinel -->
+        <mxCell id="sentinel" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Azure_Sentinel.svg;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="160" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sentinel-label" value="Microsoft Sentinel" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="215" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Defender for Cloud -->
+        <mxCell id="defender" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Security_Center.svg;" vertex="1" parent="1">
+          <mxGeometry x="1470" y="160" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="defender-label" value="Defender for Cloud" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="215" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Key Vault -->
+        <mxCell id="key-vault" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="250" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="key-vault-label" value="Key Vault" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="305" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Identity and Compliance -->
+        <mxCell id="identity-compliance" value="Identity &amp; Compliance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="370" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Microsoft Entra ID -->
+        <mxCell id="entra-id" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Azure_Active_Directory.svg;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="entra-id-label" value="Microsoft Entra ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="455" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Privileged Identity Management -->
+        <mxCell id="pim" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Privileged_Identity_Management.svg;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pim-label" value="Privileged Identity&#xa;Management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="450" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Conditional Access -->
+        <mxCell id="conditional-access" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Conditional_Access.svg;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="conditional-access-label" value="Conditional Access" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="455" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Policy -->
+        <mxCell id="azure-policy" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/management_governance/Policy.svg;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-policy-label" value="Azure Policy" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1415" y="455" width="80" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Microsoft Purview -->
+        <mxCell id="purview" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Azure_Purview_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="purview-label" value="Microsoft Purview" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="455" width="90" height="15" as="geometry" />
+        </mxCell>
+        
+        <!-- Network Connections -->
+        <!-- Production to SIRE -->
+        <mxCell id="prod-to-sire" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#D79B00;strokeWidth=3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="production-env" target="sire-env">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="230" as="sourcePoint" />
+            <mxPoint x="640" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="prod-to-sire-label" value="Site Recovery&#xa;Replication" style="text;html=1;strokeColor=none;fillColor=#FFE6CC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Primary to Secondary -->
+        <mxCell id="primary-to-secondary" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#7B1FA2;strokeWidth=3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="primary-region-container" target="secondary-region">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="340" as="sourcePoint" />
+            <mxPoint x="980" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="primary-to-secondary-label" value="Cross-Region&#xa;Replication" style="text;html=1;strokeColor=none;fillColor=#F3E5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="315" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Backup flows -->
+        <mxCell id="backup-flow1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6C8EBF;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="production-env" target="backup-layer">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="350" as="sourcePoint" />
+            <mxPoint x="490" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="backup-flow2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6C8EBF;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sire-env" target="backup-layer">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="350" as="sourcePoint" />
+            <mxPoint x="810" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Monitoring connections -->
+        <mxCell id="monitoring-flow1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#F57F17;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="secondary-region" target="monitoring-security">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1620" y="210" as="sourcePoint" />
+            <mxPoint x="1670" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Identity connections -->
+        <mxCell id="identity-flow" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#B85450;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="monitoring-security" target="identity-compliance">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1460" y="350" as="sourcePoint" />
+            <mxPoint x="1510" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Title annotations -->
+        <mxCell id="rto-rpo-annotation" value="RTO: &lt; 2 Hours&#xa;RPO: &lt; 15 Minutes&#xa;Recovery Tier: Mission-Critical" style="text;html=1;strokeColor=#D79B00;fillColor=#FFE6CC;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="260" width="200" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Well-Architected Framework -->
+        <mxCell id="waf-annotation" value="✓ Azure Well-Architected Framework&#xa;✓ Zero Trust Security Model&#xa;✓ Infrastructure as Code&#xa;✓ Business Continuity Guide Aligned" style="text;html=1;strokeColor=#2F5496;fillColor=#E1F5FE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="330" width="200" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Version info -->
+        <mxCell id="version-info" value="Version: 1.0&#xa;Last Updated: January 2024&#xa;Architecture: SIRE Multi-Region&#xa;Compliance: Azure Best Practices" style="text;html=1;strokeColor=#666666;fillColor=#F2F2F2;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="20" y="520" width="200" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
