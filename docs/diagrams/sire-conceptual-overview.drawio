@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T10:30:00.000Z" agent="5.0" etag="xyz123" version="20.8.16" type="device">
+  <diagram name="SIRE-Conceptual-Overview" id="sire-concept">
+    <mxGraphModel dx="1422" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title and Header -->
+        <mxCell id="title" value="Secure Isolated Recovery Environment (SIRE)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1f5582;" vertex="1" parent="1">
+          <mxGeometry x="284" y="40" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle" value="A specialized Azure infrastructure pattern for ransomware recovery and business continuity" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="234" y="80" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Production Environment (Left Side) -->
+        <mxCell id="prod-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="300" height="400" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="prod-title" value="Production Environment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#01579b;" vertex="1" parent="1">
+          <mxGeometry x="130" y="170" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Production Components -->
+        <mxCell id="prod-web" value="Web Applications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="prod-db" value="Databases" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="220" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="prod-vm" value="Virtual Machines" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="prod-storage" value="Storage Accounts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="280" width="90" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Threat Indicator -->
+        <mxCell id="threat" value="🚨 Ransomware Attack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#d32f2f;strokeWidth=3;fontSize=14;fontStyle=1;fontColor=#d32f2f;" vertex="1" parent="1">
+          <mxGeometry x="140" y="360" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Backup Connection (Compromised) -->
+        <mxCell id="backup-comp" value="❌ Traditional Backups&#xa;(Potentially Compromised)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#d32f2f;strokeWidth=2;fontSize=12;fontColor=#d32f2f;" vertex="1" parent="1">
+          <mxGeometry x="140" y="450" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Air Gap / Isolation Barrier -->
+        <mxCell id="airgap" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#4caf50;strokeColor=#2e7d32;strokeWidth=3;width=30;endSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="300" as="sourcePoint" />
+            <mxPoint x="550" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="airgap-label" value="Secure Isolation&#xa;Network • Identity • Access" style="text;html=1;strokeColor=none;fillColor=#e8f5e8;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#2e7d32;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="250" width="110" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- SIRE Environment (Right Side) -->
+        <mxCell id="sire-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=3;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="150" width="450" height="400" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sire-title" value="SIRE - Secure Isolated Recovery Environment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="640" y="170" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- SIRE Components -->
+        <mxCell id="sire-recovery" value="Recovery Virtual Network&#xa;(Isolated &amp; Air-Gapped)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4caf50;strokeWidth=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="220" width="180" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sire-backup" value="✅ Immutable Backups&#xa;(WORM Storage)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4caf50;strokeWidth=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="220" width="180" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sire-identity" value="Dedicated Identity&#xa;(Zero Trust Access)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4caf50;strokeWidth=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="290" width="180" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sire-monitor" value="🔍 Continuous Monitoring&#xa;(Sentinel + Defender)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4caf50;strokeWidth=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="290" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Recovery Process -->
+        <mxCell id="recovery-title" value="Emergency Recovery Process" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="640" y="360" width="350" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="step1" value="1. Activate SIRE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="620" y="395" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="step2" value="2. Restore Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="395" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="step3" value="3. Validate Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="820" y="395" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="step4" value="4. Resume Operations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="395" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Key Benefits Box -->
+        <mxCell id="benefits-title" value="Key SIRE Benefits" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1f5582;" vertex="1" parent="1">
+          <mxGeometry x="640" y="450" width="350" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="benefit1" value="🛡️ Security Isolation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="620" y="480" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="benefit2" value="💰 20-40% Cost Savings" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="790" y="480" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="benefit3" value="⚡ Rapid Recovery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="620" y="505" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="benefit4" value="✅ Compliance Ready" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="790" y="505" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Logo/Branding -->
+        <mxCell id="azure-brand" value="Microsoft Azure Well-Architected Framework" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#0078d4;" vertex="1" parent="1">
+          <mxGeometry x="434" y="580" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-title" value="Legend:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-prod" value="Production Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="605" width="120" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-sire" value="SIRE Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="605" width="120" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

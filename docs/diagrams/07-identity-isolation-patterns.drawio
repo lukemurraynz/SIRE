@@ -1,0 +1,204 @@
+<mxfile host="app.diagrams.net" modified="2024-01-10T00:00:00.000Z" agent="5.0" etag="" version="22.1.16" type="device">
+  <diagram id="Identity-Isolation-Patterns" name="Identity Isolation Patterns">
+    <mxGraphModel dx="2074" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="SIRE Identity Isolation Patterns - Decision Framework" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2F5496;" vertex="1" parent="1">
+          <mxGeometry x="427" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Decision Framework Header -->
+        <mxCell id="decision-header" value="Choose Your Identity Isolation Pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#37474F;" vertex="1" parent="1">
+          <mxGeometry x="527" y="70" width="600" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Statistics Box -->
+        <mxCell id="statistics-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="stats-title" value="Implementation Statistics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="130" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="stats-content" value="📊 95% of organizations use Same-Tenant RBAC&#xa;💰 20-40% cost savings with same-tenant approach&#xa;⚡ 2-4 weeks implementation vs 8-12 weeks&#xa;🔒 Equivalent security isolation&#xa;✅ Proven enterprise deployment pattern" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="280" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Same-Tenant RBAC Pattern -->
+        <mxCell id="same-tenant-container" value="Same-Tenant RBAC Isolation (Primary - 95%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="120" width="400" height="480" as="geometry" />
+        </mxCell>
+        
+        <!-- Same-Tenant Architecture -->
+        <mxCell id="same-tenant-arch" value="Microsoft Entra ID (Existing Tenant)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FF8F00;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="400" y="160" width="360" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Production Groups -->
+        <mxCell id="prod-groups" value="Production Groups" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prod-list" value="• Prod-Admins&#xa;• Prod-Operators&#xa;• Prod-Users" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="425" y="210" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- RBAC Boundary -->
+        <mxCell id="rbac-boundary" value="RBAC Boundary" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=4;dashPattern=8 8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="190" as="sourcePoint" />
+            <mxPoint x="560" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rbac-label" value="Strict RBAC&#xa;Isolation" style="text;html=1;strokeColor=none;fillColor=#FFEBEE;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#D32F2F;" vertex="1" parent="1">
+          <mxGeometry x="565" y="255" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- SIRE Groups -->
+        <mxCell id="sire-groups-same" value="SIRE Groups" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sire-list-same" value="• SIRE-Administrators&#xa;• SIRE-Operators&#xa;• SIRE-Forensics" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="625" y="210" width="110" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Custom RBAC Roles -->
+        <mxCell id="custom-roles-same" value="Custom RBAC Roles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="270" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="roles-list-same" value="• SIRE Recovery Operator&#xa;• SIRE Backup Reader&#xa;• SIRE Forensics Analyst&#xa;• SIRE Emergency Access" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="425" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Controls -->
+        <mxCell id="security-controls-same" value="Security Controls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#C2185B;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="270" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controls-list-same" value="• Conditional Access Policies&#xa;• PIM/JIT (4-hour activation)&#xa;• MFA + Device Compliance&#xa;• Session Controls" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="595" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Benefits -->
+        <mxCell id="benefits-same" value="✅ Benefits" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="400" y="380" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-list-same" value="• Faster deployment (2-4 weeks)&#xa;• Lower operational complexity&#xa;• Cost-effective (20-40% savings)&#xa;• Simplified governance processes&#xa;• Same security isolation&#xa;• Enterprise-proven approach&#xa;• Easier cross-functional access&#xa;• Streamlined audit processes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="405" width="340" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Use Cases -->
+        <mxCell id="use-cases-same" value="🎯 When to Use (95% of organizations)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="520" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="use-cases-list-same" value="• Standard enterprise deployments • Mature Entra ID governance&#xa;• Cost-sensitive implementations • RBAC boundaries meet compliance&#xa;• Simplified operational requirements • Existing security frameworks" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="545" width="340" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- Separate Tenant Pattern -->
+        <mxCell id="separate-tenant-container" value="Separate Tenant Isolation (Advanced - 5%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#F44336;strokeWidth=4;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="820" y="120" width="400" height="480" as="geometry" />
+        </mxCell>
+        
+        <!-- Production Tenant -->
+        <mxCell id="prod-tenant" value="Production Tenant" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="160" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="prod-tenant-details" value="• Complete production&#xa;identity infrastructure&#xa;• Standard governance&#xa;• Existing policies" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="845" y="185" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- SIRE Tenant -->
+        <mxCell id="sire-tenant" value="SIRE Dedicated Tenant" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="160" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sire-tenant-details" value="• Isolated identity stack&#xa;• Independent policies&#xa;• Separate governance&#xa;• Air-gapped identity" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="185" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Tenant Isolation -->
+        <mxCell id="tenant-isolation" value="Complete Identity Isolation" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#FF5722;strokeWidth=6;dashPattern=12 12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="160" as="sourcePoint" />
+            <mxPoint x="1020" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tenant-label" value="Zero Shared&#xa;Identity" style="text;html=1;strokeColor=none;fillColor=#FFEBEE;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#D32F2F;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="185" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Additional Complexity -->
+        <mxCell id="complexity-separate" value="Additional Complexity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="840" y="270" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="complexity-list-separate" value="• Duplicate governance processes • Cross-tenant access management&#xa;• Separate conditional access policies • Independent PIM configurations&#xa;• Additional licensing costs • Complex user provisioning" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="845" y="290" width="350" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Drawbacks -->
+        <mxCell id="drawbacks-separate" value="❌ Considerations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#D32F2F;" vertex="1" parent="1">
+          <mxGeometry x="840" y="380" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drawbacks-list-separate" value="• Higher operational complexity&#xa;• 40-60% additional costs&#xa;• Longer implementation (8-12 weeks)&#xa;• Duplicate governance overhead&#xa;• Complex cross-tenant scenarios&#xa;• Additional licensing requirements&#xa;• Separate emergency procedures&#xa;• Independent compliance processes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="405" width="340" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Use Cases Separate -->
+        <mxCell id="use-cases-separate" value="🎯 When to Use (5% of organizations)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#F44336;" vertex="1" parent="1">
+          <mxGeometry x="840" y="520" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="use-cases-list-separate" value="• Government/defense with clearance requirements • Strict regulatory mandates&#xa;• Healthcare with extreme HIPAA requirements • Active threat campaigns&#xa;• Explicit compliance requirement for tenant separation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="545" width="340" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- Decision Matrix -->
+        <mxCell id="decision-matrix" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#666666;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="300" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="matrix-title" value="Decision Matrix" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="290" width="200" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Decision Criteria -->
+        <mxCell id="criteria-header" value="Assessment Criteria:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="q1" value="❓ Do you have specific regulatory&#xa;requirements for tenant separation?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="345" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="• NO → Same-Tenant RBAC&#xa;• YES → Evaluate further" style="text;html=1;strokeColor=none;fillColor=#E8F5E8;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="65" y="375" width="270" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="q2" value="❓ Are you under active sophisticated&#xa;threat campaigns requiring extreme isolation?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="405" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="• NO → Same-Tenant RBAC&#xa;• YES → Consider separate tenant" style="text;html=1;strokeColor=none;fillColor=#FFEBEE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="65" y="435" width="270" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="q3" value="❓ Can you justify 40-60% additional&#xa;costs and operational complexity?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="465" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="• NO → Same-Tenant RBAC&#xa;• YES → Separate tenant viable" style="text;html=1;strokeColor=none;fillColor=#FFF3E0;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="65" y="495" width="270" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Recommendation -->
+        <mxCell id="recommendation" value="💡 Recommendation: Start with Same-Tenant RBAC" style="text;html=1;strokeColor=none;fillColor=#E8F5E8;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="60" y="530" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rec-text" value="95% of organizations successfully implement SIRE&#xa;with same-tenant RBAC isolation. Upgrade to&#xa;separate tenant only if explicit requirements exist." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="565" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Metadata -->
+        <mxCell id="metadata" value="Architecture: SIRE Identity Isolation Patterns&#xa;Primary Recommendation: Same-Tenant RBAC (95%)&#xa;Version: 1.0 | Updated: January 2024&#xa;Framework: Azure Well-Architected + Zero Trust" style="text;html=1;strokeColor=#37474F;fillColor=#ECEFF1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="450" y="630" width="400" height="60" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
